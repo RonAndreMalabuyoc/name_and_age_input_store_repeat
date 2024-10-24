@@ -10,7 +10,7 @@ while True:
 
             user_info[Name] = Age
 
-            Retry = input("Will you give us your information again? Put yes if yes, put no if no: ")
+            Retry = input("Will you give us your information again? (yes/no): ")
             if Retry == "no":
                 break
         except:
@@ -22,6 +22,13 @@ while True:
     elif Retry != "no":
         print("Good job Buddy!")
 
-print("\nUsers Information: ")
+oldest_person = None
+highest_age = -1
+
 for name, age in user_info.items():
-    print(f"{name}: {age}")
+    if age > highest_age:
+        highest_age = age
+        oldest_person = name
+
+if oldest_person:
+    print(f"\nThe Oldest person here is {oldest_person}: {highest_age}")
