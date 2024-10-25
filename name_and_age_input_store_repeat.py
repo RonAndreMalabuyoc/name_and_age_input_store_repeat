@@ -1,27 +1,20 @@
 user_info = {}
 
 while True:
-    while True:
-        try:
-            Name = input("Please put your name here: ")
-            Age = int(input ("Please put your age here: "))
-            user_info['name'] = Name
-            user_info['age'] = Age
+    try:
+        Name = input("Please put your name here: ")
+        Age = int(input ("Please put your age here: "))
+        user_info['name'] = Name
+        user_info['age'] = Age
 
-            user_info[Name] = Age
+        user_info[Name] = Age
 
-            Retry = input("Will you give us your information again? (yes/no): ")
-            if Retry == "no":
-                break
-        except:
-            print("Invalid input, please try again")
+        Retry = input("Will you give us your information again? (yes/no): ")
+        if Retry == "no":
+            break
+    except:
+        print("Invalid input, please try again")
             
-
-    if Retry == "no":
-        break
-    elif Retry != "no":
-        print("Good job Buddy!")
-
 oldest_person = None
 highest_age = -1
 
